@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		
+		<h2>Covid news detector for social media posts </h2>
+		
+	</div>
+	</header>
+	<p style="color:#4d3300;font-size:20;text-align: center;"><b>Results for post</b></p>
+	<div class="results">
+
+
+		
+	{% if prediction == "real"%}
+	<h2 style="color:blue;">It is real.</h2>
+	{% elif prediction == "fake"%}
+	<h2 style="color:red;">It is fake.</h2>
+	{% endif %}
+
+	</div>
+
+</body>
+</html>
